@@ -5,21 +5,21 @@
 class Frk < Formula
   desc "frk is summary generator for your GitHub activities."
   homepage "https://github.com/winebarrel/frk"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/frk/releases/download/v1.0.0/frk_1.0.0_darwin_arm64.tar.gz"
-      sha256 "666a187381bf9754ba5fcce676b307620e7787ce7580b3db691f03911ed44645"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/frk/releases/download/v1.1.0/frk_1.1.0_darwin_amd64.tar.gz"
+      sha256 "44ff0146155ecbd66c997e835c8f3ed22b0e3272f4822cc3a886df621d2bec55"
 
       def install
         bin.install 'frk'
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/frk/releases/download/v1.0.0/frk_1.0.0_darwin_amd64.tar.gz"
-      sha256 "7a8571b8879c52a57d6a4c111fde294edfa36f0032e8442d7b220d486e4bdc42"
+    if Hardware::CPU.arm?
+      url "https://github.com/winebarrel/frk/releases/download/v1.1.0/frk_1.1.0_darwin_arm64.tar.gz"
+      sha256 "26da119b1c8a4ef0789018165c0788483c02fcc811df3f55a397e5c551275e4c"
 
       def install
         bin.install 'frk'
@@ -29,16 +29,16 @@ class Frk < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/frk/releases/download/v1.0.0/frk_1.0.0_linux_arm64.tar.gz"
-      sha256 "aa4e016d107b7939723e3d77c9d2523d686c67168496056561275778129f41a6"
+      url "https://github.com/winebarrel/frk/releases/download/v1.1.0/frk_1.1.0_linux_arm64.tar.gz"
+      sha256 "fa32dc2f02449e499e9c768fa70ba7ebad2fffde5cb07b6c3301c6a930dbeca3"
 
       def install
         bin.install 'frk'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/frk/releases/download/v1.0.0/frk_1.0.0_linux_amd64.tar.gz"
-      sha256 "912118096f042cddcefdc5b57dd984cd5635870a4190495a2400e62bc3cd0302"
+      url "https://github.com/winebarrel/frk/releases/download/v1.1.0/frk_1.1.0_linux_amd64.tar.gz"
+      sha256 "6b1a384b81834adecfcd65ea78102c823c8410b581c6a7da3e90c862e8734bb7"
 
       def install
         bin.install 'frk'
